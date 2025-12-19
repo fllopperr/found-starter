@@ -20,12 +20,6 @@ export const Header = () => {
 							Проекты
 						</NavLink>
 					</li>
-					<li>
-						<a href='#creator'>Авторам</a>
-					</li>
-					<li>
-						<a href='#investor'>Участникам</a>
-					</li>
 				</ul>
 			</nav>
 

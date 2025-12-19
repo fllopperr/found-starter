@@ -1,5 +1,5 @@
 import type { RouteObject } from 'react-router-dom'
-import { createBrowserRouter } from 'react-router-dom'
+import { createHashRouter } from 'react-router-dom'
 import App from '../App'
 import { CreateProjectPage } from '../pages/CreateProjectPage/CreateProjectPage'
 import { HomePage } from '../pages/HomePage/HomePage'
@@ -32,4 +32,4 @@ const routes: IRoute[] = [
 	},
 ]
 
-export const router = createBrowserRouter(routes as RouteObject[])
+export const router = createHashRouter(routes as RouteObject[])
