@@ -1,11 +1,13 @@
+import type { RouteObject } from 'react-router-dom'
 import { createBrowserRouter } from 'react-router-dom'
 import App from '../App'
 import { CreateProjectPage } from '../pages/CreateProjectPage/CreateProjectPage'
 import { HomePage } from '../pages/HomePage/HomePage'
 import { ProjectPage } from '../pages/ProjectPage/ProjectPage'
 import { ProjectsPage } from '../pages/ProjectsPage/ProjectsPage'
+import type { IRoute } from '../types/routes.types'
 
-export const router = createBrowserRouter([
+const routes: IRoute[] = [
 	{
 		path: '/',
 		element: <App />,
@@ -28,4 +30,6 @@ export const router = createBrowserRouter([
 			},
 		],
 	},
-])
+]
+
+export const router = createBrowserRouter(routes as RouteObject[])

@@ -1,8 +1,7 @@
 import TelegramIcon from '@mui/icons-material/Telegram'
-import type { FC } from 'react'
 import styles from './Footer.module.css'
 
-export const Footer: FC = () => {
+export const Footer = () => {
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.container}>

@@ -1,13 +1,12 @@
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday'
 import GroupIcon from '@mui/icons-material/Group'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
-import type { FC } from 'react'
 import { useParams } from 'react-router-dom'
 import { Projects } from '../../data/data'
 import type { IProject } from '../../types/project.types'
 import styles from './ProjectPage.module.css'
 
-export const ProjectPage: FC = () => {
+export const ProjectPage = () => {
 	const { id } = useParams<{ id: string }>()
 
 	const project: IProject | undefined = Projects.find(

@@ -1,6 +1,5 @@
 import AddIcon from '@mui/icons-material/Add'
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline'
-import type { FC } from 'react'
 import { useState } from 'react'
 import styles from './CreateProjectPage.module.css'
 
@@ -37,7 +36,7 @@ const STEPS = [
 	{ id: 4, label: 'Вознаграждение' },
 ]
 
-export const CreateProjectPage: FC = () => {
+export const CreateProjectPage = () => {
 	const [currentStep, setCurrentStep] = useState(1)
 
 	// Общее состояние формы
@@ -71,7 +70,10 @@ export const CreateProjectPage: FC = () => {
 		if (currentStep > 1) setCurrentStep(prev => prev - 1)
 	}
 
-	const handleChange = (field: keyof IFormData, value: any) => {
+	const handleChange = <K extends keyof IFormData>(
+		field: K,
+		value: IFormData[K]
+	) => {
 		setFormData(prev => ({ ...prev, [field]: value }))
 	}
 

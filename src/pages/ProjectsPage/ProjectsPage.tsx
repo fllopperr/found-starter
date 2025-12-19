@@ -1,4 +1,3 @@
-import type { FC } from 'react'
 import { useState } from 'react'
 import { ProjectCard } from '../../components/ProjectCard/ProjectCard'
 import { Projects } from '../../data/data'
@@ -7,7 +6,7 @@ import styles from './ProjectsPage.module.css'
 
 const PROJECTS_PER_PAGE = 6
 
-export const ProjectsPage: FC = () => {
+export const ProjectsPage = () => {
 	const [currentPage, setCurrentPage] = useState<number>(1)
 
 	const totalPages: number = Math.ceil(Projects.length / PROJECTS_PER_PAGE)
