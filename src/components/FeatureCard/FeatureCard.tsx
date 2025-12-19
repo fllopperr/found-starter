@@ -2,11 +2,11 @@ import BoltIcon from '@mui/icons-material/Bolt'
 import CheckCircleIcon from '@mui/icons-material/CheckCircle'
 import SecurityIcon from '@mui/icons-material/Security'
 import VisibilityIcon from '@mui/icons-material/Visibility'
-import type { FC } from 'react'
+import type { FC, ReactNode } from 'react'
 import styles from './FeatureCard.module.css'
 
 interface Feature {
-	icon: JSX.Element
+	icon: ReactNode
 	title: string
 	description: string
 }
