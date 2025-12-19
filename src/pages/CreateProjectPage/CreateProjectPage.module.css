@@ -1,0 +1,405 @@
+/* Layout */
+.page {
+	min-height: 100vh;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	background-color: #dbeafe; /* Светлый фон для заголовка, как на макете - серый с оттенком */
+	background-color: #e5e7eb; /* Поправка под макет: светло-серый */
+	padding: 40px 0;
+	border-bottom: 1px solid #d1d5db;
+}
+
+.headerContent {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 24px;
+}
+
+.pageTitle {
+	font-size: 16px;
+	color: #4b5563;
+	margin-bottom: 32px;
+}
+
+/* Stepper */
+.stepper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.stepItemWrapper {
+	display: flex;
+	align-items: center;
+	flex: 1;
+}
+
+.stepItemWrapper:last-child {
+	flex: 0;
+}
+
+.stepItem {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	white-space: nowrap;
+}
+
+.stepCircle {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background-color: #4b5563; /* Default inactive gray */
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+	font-size: 14px;
+	transition: background-color 0.3s;
+}
+
+.stepCircleActive {
+	background-color: #1d4ed8; /* Blue */
+}
+
+.stepLabel {
+	font-size: 14px;
+	color: #4b5563;
+	font-weight: 500;
+}
+
+.stepLabelActive {
+	color: #1d4ed8;
+}
+
+.stepLine {
+	flex: 1;
+	height: 2px;
+	background-color: #9ca3af;
+	margin: 0 16px;
+}
+
+.stepLineActive {
+	background-color: #1d4ed8;
+}
+
+/* Main Content Area */
+.main {
+	flex: 1;
+	padding: 60px 24px;
+}
+
+.container {
+	max-width: 680px;
+	margin: 0 auto;
+}
+
+.stepTitle {
+	font-size: 24px;
+	font-weight: 600;
+	color: #111827;
+	margin-bottom: 12px;
+}
+
+.stepSubtitle {
+	font-size: 16px;
+	color: #6b7280;
+	margin-bottom: 32px;
+}
+
+/* Forms */
+.formGroup {
+	margin-bottom: 24px;
+	display: flex;
+	flex-direction: column;
+}
+
+.label {
+	font-size: 14px;
+	font-weight: 500;
+	color: #374151;
+	margin-bottom: 8px;
+}
+
+.input,
+.select,
+.textarea {
+	padding: 12px 16px;
+	border: 1px solid #e5e7eb;
+	border-radius: 8px;
+	font-size: 15px;
+	color: #111827;
+	outline: none;
+	transition: border-color 0.2s;
+	background-color: white;
+	width: 100%;
+	box-sizing: border-box; /* Важно для padding */
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+	border-color: #2563eb;
+}
+
+.textarea {
+	resize: vertical;
+	min-height: 120px;
+}
+
+.helperText {
+	font-size: 12px;
+	color: #9ca3af;
+	margin-top: 6px;
+}
+
+.inputWrapper {
+	position: relative;
+}
+
+.currencyIcon {
+	position: absolute;
+	right: 16px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #9ca3af;
+	font-weight: 500;
+}
+
+/* Step 2 Specifics */
+.dropzone {
+	border: 1px dashed #e5e7eb;
+	border-radius: 8px;
+	padding: 48px 24px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	cursor: pointer;
+	background-color: #fcfcfc;
+}
+
+.dropzoneText {
+	color: #6b7280;
+	font-size: 14px;
+	margin-bottom: 4px;
+}
+
+.dropzoneSub {
+	color: #d1d5db;
+	font-size: 12px;
+}
+
+.addButtonBasic {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 16px;
+	border: 1px dashed #d1d5db;
+	border-radius: 8px;
+	background: white;
+	color: #374151;
+	font-size: 14px;
+	cursor: pointer;
+	width: fit-content;
+}
+
+/* Step 3 Specifics */
+.radioCard {
+	border: 1px solid #e5e7eb;
+	border-radius: 8px;
+	padding: 16px;
+	margin-bottom: 12px;
+	display: flex;
+	gap: 12px;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.radioCard:hover {
+	border-color: #bfdbfe;
+}
+
+.radioCardActive {
+	border-color: #e5e7eb; /* В макете рамка не сильно меняется, но можно подсветить */
+}
+
+.radioIndicator {
+	width: 16px;
+	height: 16px;
+	border: 1px solid #2563eb; /* Blue border always visible or gray? Screenshot shows blue circle outline */
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 2px;
+	flex-shrink: 0;
+}
+
+.radioDot {
+	width: 8px;
+	height: 8px;
+	background-color: #2563eb;
+	border-radius: 50%;
+}
+
+.radioTitle {
+	font-weight: 500;
+	color: #111827;
+	font-size: 14px;
+	margin-bottom: 4px;
+}
+
+.radioDesc {
+	font-size: 13px;
+	color: #9ca3af;
+}
+
+.infoBox {
+	background-color: #dbeafe; /* light blue */
+	color: #1e40af;
+	padding: 16px;
+	border-radius: 8px;
+	font-size: 13px;
+	line-height: 1.5;
+	margin-top: 24px;
+}
+
+/* Step 4 Specifics */
+.rewardCard {
+	border: 1px solid #e5e7eb;
+	border-radius: 8px;
+	padding: 24px;
+	margin-bottom: 24px;
+	position: relative;
+}
+
+.rewardHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	font-weight: 500;
+	color: #4b5563;
+}
+
+.deleteBtn {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.deleteBtn:disabled {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+.addRewardBtn {
+	width: 100%;
+	padding: 16px;
+	border: 1px dashed #e5e7eb;
+	background: white;
+	border-radius: 8px;
+	color: #111827;
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	cursor: pointer;
+	margin-bottom: 40px;
+}
+
+/* ===== Footer Navigation ===== */
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 48px;
+	padding-top: 32px;
+	border-top: 1px solid #e5e7eb;
+	position: relative; /* Нужно для абсолютного позиционирования счетчика */
+	min-height: 50px;
+}
+
+.btnBack {
+	padding: 10px 24px;
+	border: 1px solid #e5e7eb;
+	background: white;
+	border-radius: 8px;
+	color: #374151;
+	font-weight: 500;
+	cursor: pointer;
+	z-index: 2; /* Чтобы кнопка была поверх центрального слоя */
+}
+
+.btnBack:disabled {
+	opacity: 0; /* Скрываем, если это первый шаг, чтобы не занимала место */
+	pointer-events: none;
+}
+
+/* Фикс счетчика шагов */
+.stepIndicator {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 14px;
+	color: #111827;
+	font-weight: 500;
+	white-space: nowrap;
+	text-align: center;
+}
+
+.btnNext {
+	min-width: 120px; /* Минимальная ширина для обычной кнопки */
+	padding: 10px 32px;
+	background-color: #2563eb;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.2s;
+	z-index: 2;
+}
+
+.btnNext:hover {
+	background-color: #1d4ed8;
+}
+
+/* Фикс кнопки на 4-м шаге */
+.btnSubmit {
+	background-color: #16a34a; /* Зеленая как в макете */
+	min-width: 220px; /* Ограничиваем, чтобы не была на пол-экрана */
+	padding: 10px 20px;
+}
+
+.btnSubmit:hover {
+	background-color: #15803d;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 480px) {
+	.footer {
+		flex-direction: column-reverse;
+		gap: 20px;
+	}
+	.stepIndicator {
+		position: static;
+		transform: none;
+	}
+	.btnNext,
+	.btnSubmit {
+		width: 100%;
+	}
+}
